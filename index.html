@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Slidingmenujs by apptitudes</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Slidingmenujs</h1>
+        <h2>A simple and easy to understand sliding menu implementation using javascript and jquery</h2>
+        <a href="https://github.com/apptitudes/SlidingMenuJS" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>Welcome to Sliding Menu JS.</h3>
+
+<ul>
+<li>Source: <a href="https://github.com/apptitudes/SlidingMenuJS">https://github.com/apptitudes/SlidingMenuJS</a>
+</li>
+<li>Homepage: <a href="http://apptitudes.fr">http://apptitudes.fr</a>
+</li>
+<li>Twitter: <a href="https://twitter.com/SlidingMenuJS">@SlidingMenuJS</a>
+</li>
+<li>Twitter: <a href="https://twitter.com/apptitudes">@apptitudes</a>
+</li>
+</ul><h2>Quick look :</h2>
+
+<p><img src="http://apptitudes.fr/distrib/git/sliding_menu_js/screenshots/screenshot_global.png" alt="Alt text"></p>
+
+<h2>Why this menu ?</h2>
+
+<p>We wanted a sliding menu for a web app.</p>
+
+<p>We've tried a lot of exisiting menu on the web but none were compatible with all of the platform we intended to support</p>
+
+<p>Of course most of the projects found works well with the example case but when we start using it in real environment, the bug starts to appears.</p>
+
+<p>Here is the list of most commons problem we've encounter while trying various project found on the web :</p>
+
+<ul>
+<li>Bug when <em>content page</em> is longer than <em>menu</em> (content appears on top etc...).</li>
+<li>Bug when <em>menu</em> is longer than <em>content</em>.</li>
+<li>Menu stay fixed or open when we change the device orientation.</li>
+<li>Ajax loading not supported.</li>
+</ul><p>Of course we've done our best to fix all of those bugs in SlidingMenuJs, see below.</p>
+
+<h2>Features ?</h2>
+
+<p>Our main goal was to obtain a menu</p>
+
+<ul>
+<li>Simple to understand and edit / custom</li>
+<li>LightWeight</li>
+<li>Implement Ajax loading for content page</li>
+<li>Support native browser navigation (previous and next button) </li>
+<li>Device Rotation support (Orientation change is detected and both menu and content adjusts their positions)</li>
+</ul><h2>Which features we doesn't support ?</h2>
+
+<ul>
+<li>
+<strong>Gestures</strong> : we wanted this menu to work on "old" devices, htc hero for example which doesn't support gestures.</li>
+</ul><p>However, <strong>if you wan't to implement basic gestures</strong> to open your menu, you can <strong>simply add this</strong> code <code>(tested on iOs &gt; 3.0 and Android &gt; 2.2)</code> :</p>
+
+<pre><code>/* TODO : copy past gesture code here */
+</code></pre>
+
+<ul>
+<li>
+<strong>CSS3 animations</strong> : initially we did support this kind of animation but they we're not compatible with Windows phone so we had to remove it.</li>
+</ul><h2>Supported OS and phones ?</h2>
+
+<p>Here is a short list of phone on which we have tested and validate the menu.</p>
+
+<p>Feel free to complete this list with your own tests (or send us a tweet with the device info you've tested on)</p>
+
+<dl>
+<dt>Operating system</dt>
+  <dd>Device name (version OS)</dd>
+</dl><dl>
+<dt>iOs</dt>
+  <dd>iPhone 3GS (v 5.1)</dd>
+  <dd>iPhone 4 (v 6.0)</dd>
+  <dd>iPhone 4S (v 6.1.1)</dd>
+  <dd>iPhone 5 (v 6.1.1`)</dd>
+  <dt>Android</dt>
+  <dd>Nexus 4 (v 4.2.2)</dd>
+  <dd>Galaxy Nexus (v 4.1 / 4.2.2)</dd>
+  <dd>Htc Desire (v 2.2)</dd>
+  <dd>Htc Hero (v 2.1)</dd>
+  <dt>Windows phone</dt>
+  <dd>Nokia Lumia 800 (v 7.5)</dd>
+</dl><h2>Who Are You?</h2>
+
+<p>I'm <a href="https://github.com/chipowok" class="user-mention">@chipowok</a> and I'm part of <a href="https://github.com/apptitudes" class="user-mention">@apptitudes</a> :
+We are a mobile developpement company check us out at <a href="http://www.apptitudes.fr">www.apptitudes.fr</a></p>
+
+<h2>Licence</h2>
+
+<p><a href="http://en.wikipedia.org/wiki/Beerware">Beerware</a></p>
+
+<pre><code>/*
+ * ----------------------------------------------------------------------------
+ * "THE BEER-WARE LICENSE" (Revision 42):
+ * &lt;@chipowok&gt; wrote this file. As long as you retain this notice you
+ * can do whatever you want with this stuff. If we meet some day, and you think
+ * this stuff is worth it, you can buy me a beer in return
+ * ----------------------------------------------------------------------------
+ */
+</code></pre>
+
+<p>If you use this code in your project, please send us a link or a screenshot to show the results ;-)</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/apptitudes/SlidingMenuJS/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/apptitudes/SlidingMenuJS/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/apptitudes/SlidingMenuJS"></a> is maintained by <a href="https://github.com/apptitudes">apptitudes</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
