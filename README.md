@@ -18,7 +18,7 @@ Why this menu ?
 
 We wanted a sliding menu for a web app.
 
-We've tried a lot of exisiting menu implementations on the web but none were compatible with all of the platforms we intended to support
+We've tried a lot of existing menu implementations on the web but none were compatible with all of the platforms we intended to support
 
 Of course most of the projects found worked well within their example cases but when we started using it in real environment, bugs started crawling.
 
