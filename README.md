@@ -18,11 +18,11 @@ Why this menu ?
 
 We wanted a sliding menu for a web app.
 
-We've tried a lot of exisiting menu on the web but none were compatible with all of the platform we intended to support
+We've tried a lot of exisiting menu implementations on the web but none were compatible with all of the platforms we intended to support
 
-Of course most of the projects found works well with the example case but when we start using it in real environment, the bug starts to appears.
+Of course most of the projects found worked well within their example cases but when we started using it in real environment, bugs started crawling.
 
-Here is the list of most commons problem we've encounter while trying various project found on the web :
+Here is the list of most common problems we've encounter while trying various projects found on the web :
 
 * Bug when *content page* is longer than *menu* (content appears on top etc...).
 * Bug when *menu* is longer than *content*.
@@ -40,10 +40,10 @@ Our main goal was to obtain a menu
 * LightWeight
 * Implement Ajax loading for content page
 * Support native browser navigation (previous and next button) 
-* Device Rotation support (Orientation change is detected and both menu and content adjusts their positions)
+* Device Rotation support (Orientation change is detected and both menu and content adjust their positions)
 
 
-Which features we doesn't support ?
+What features aren't supported ?
 -----------
 * __Gestures__ : we wanted this menu to work on "old" devices, htc hero for example which doesn't support gestures.
 
@@ -55,7 +55,7 @@ However, __if you wan't to implement basic gestures__ to open your menu, you can
 
 Supported OS and phones ?
 ----------------------------
-Here is a short list of phone on which we have tested and validate the menu.
+Here is the list of devices that we have been testing on 
 
 Feel free to complete this list with your own tests (or send us a tweet with the device info you've tested on)
 
