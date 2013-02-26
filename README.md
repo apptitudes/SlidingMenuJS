@@ -1,5 +1,7 @@
 ### Welcome to Sliding Menu JS.
 
+Features, usage and instructions are [summarized on the homepage](http://apptitudes.github.com/SlidingMenuJS/).
+
 * Source: [https://github.com/apptitudes/SlidingMenuJS](https://github.com/apptitudes/SlidingMenuJS)
 * Homepage: [http://apptitudes.fr](http://apptitudes.fr)
 * Twitter: [@SlidingMenuJS](https://twitter.com/SlidingMenuJS)
