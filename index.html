@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Slidingmenujs : A simple and easy to understand sliding menu implementation using javascript and jquery" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Slidingmenujs by apptitudes</title>
+    <title>Slidingmenujs</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Slidingmenujs</h1>
-        <h2>A simple and easy to understand sliding menu implementation using javascript and jquery</h2>
-        <a href="https://github.com/apptitudes/SlidingMenuJS" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h3>Welcome to Sliding Menu JS.</h3>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/apptitudes/SlidingMenuJS">View on GitHub</a>
+
+          <h1 id="project_title">Slidingmenujs</h1>
+          <h2 id="project_tagline">A simple and easy to understand sliding menu implementation using javascript and jquery</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/apptitudes/SlidingMenuJS/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/apptitudes/SlidingMenuJS/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>Welcome to Sliding Menu JS.</h3>
 
 <ul>
 <li>Source: <a href="https://github.com/apptitudes/SlidingMenuJS">https://github.com/apptitudes/SlidingMenuJS</a>
@@ -75,10 +78,30 @@
 <ul>
 <li>
 <strong>Gestures</strong> : we wanted this menu to work on "old" devices, htc hero for example which doesn't support gestures.</li>
-</ul><p>However, <strong>if you wan't to implement basic gestures</strong> to open your menu, you can <strong>simply add this</strong> code <code>(tested on iOs &gt; 3.0 and Android &gt; 2.2)</code> :</p>
+</ul><p>However, <strong>if you wan't to implement basic gestures</strong> like swipe to open your menu, you can <strong>simply</strong> : <code>(tested on iOs &gt; 4.0 and Android &gt; 2.2)</code> :</p>
 
-<pre><code>/* TODO : copy past gesture code here */
-</code></pre>
+<ul>
+<li>Go to <a href="http://eightmedia.github.com/hammer.js/">http://eightmedia.github.com/hammer.js/</a> and download source. (simple and cool touch gestures library)</li>
+<li>put hammer.min.js in your folder containing index.php of slidingMenuJS</li>
+<li>Edit index.php and menu_nav_js as shown below :</li>
+</ul><div class="highlight"><pre>    <span class="cm">/* Paste this in index.php between &lt;head&gt;&lt;/head&gt;: */</span>
+    <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"hammer.min.js"</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+
+    <span class="cm">/* Paste this in menu_nav.js : */</span>
+    <span class="nx">initGestures</span><span class="p">();</span>
+
+    <span class="kd">function</span> <span class="nx">initGestures</span><span class="p">()</span> <span class="p">{</span>
+
+        <span class="kd">var</span> <span class="nx">openingGesture</span> <span class="o">=</span> <span class="nx">Hammer</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">"swiperight"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">openMenu</span><span class="p">();</span>
+        <span class="p">});</span>
+        <span class="kd">var</span> <span class="nx">closingGesture</span> <span class="o">=</span> <span class="nx">Hammer</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s2">"swipeleft"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">closeMenu</span><span class="p">();</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+</pre></div>
+
+<p>That's it ! Five lines of code and one lib and SlidingMenuJS now supports gestures ;-)</p>
 
 <ul>
 <li>
@@ -125,25 +148,18 @@ We are a mobile developpement company check us out at <a href="http://www.apptit
 </code></pre>
 
 <p>If you use this code in your project, please send us a link or a screenshot to show the results ;-)</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/apptitudes/SlidingMenuJS/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/apptitudes/SlidingMenuJS/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/apptitudes/SlidingMenuJS"></a> is maintained by <a href="https://github.com/apptitudes">apptitudes</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Slidingmenujs maintained by <a href="https://github.com/apptitudes">apptitudes</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
