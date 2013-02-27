@@ -1,0 +1,102 @@
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+
+body { 
+	background: #ffff; 
+	font-family: Verdana, Arial, Tahoma, sans-serif; 
+	font-size: 62.5%; 
+	line-height: 1; 
+}
+
+a { 
+	-webkit-tap-highlight-color: rgba(0,0,0,0); 
+	-webkit-touch-callout: none; 
+}
+
+p {
+	margin-top: 5px;
+}
+
+/* base components */
+#mobileContainer { 
+	position: relative; 
+	overflow: hidden; 
+}
+
+#page { 
+	position: relative; 
+	left: 0; 
+	top:0px; 
+	z-index: 99999; 
+}
+
+#slidingMenu { 
+	background: #475566; 
+	display: block; 
+	position: absolute;
+	overflow:scroll; 
+	width: 100%; 
+	left: 0px; 
+	top: 0px; 
+	z-index: 0;
+	visibility: hidden;	/* to block user interaction on wp7 (z-index wont work) */
+ }
+
+/* content property */
+#header {
+	display: block; 
+	height : 45px;
+	background: url('img/header_bg.png'); 
+}
+
+.show-menu-button { 
+	display: block; 
+	float: left; 
+	width: 24px; 
+	height: 22px; 
+	margin-top: 12px; 
+	margin-left: 11px;
+	background: url('img/menu_bt.png') no-repeat; 
+}
+
+#pageContent { 
+	background: #fff; 
+	padding: 5px 12px; 
+	height: 100%; 
+	z-index: 9999; 
+}
+
+#slidingMenu ul { 
+	list-style: none; 
+	background: #33374b; 
+	height: 100%;
+	overflow:scroll; 
+}
+
+#slidingMenu ul li { 
+	display: block; 
+	border-bottom: 1px solid #414657;
+}
+
+.menu-icon { 
+	vertical-align: middle;
+	margin-right: 6px;
+	border:none; /* wp7 display a border on image link*/
+}
+
+#slidingMenu ul li a { 
+	position: relative; 
+	display: block;  
+	line-height: 45px;
+	padding-left: 12px; 
+	color: #c5cbdb; 
+	font-size: 1.6em; 
+	text-decoration: none; 
+}
+
+#slidingMenu ul li a:hover { 
+	color: #999eac; 
+	text-decoration: none; 
+}
