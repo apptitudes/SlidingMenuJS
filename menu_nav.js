@@ -50,16 +50,17 @@ $(document).ready(function(){
 
 		isMenuOpen = false;
 
-    	page.animate({
-            left: "0px"
-    	}, { duration: 180 })
+    	page.animate(
+    		{	left: "0px" }, 
+    		{	duration: 180 , 
+    			//For wp7 where div with lower z-index are clickable....
+     			//SetTimeout to hide the menu only after closing
+	    		complete: function() { slidingMenu.css("visibility","hidden");}
+			}
+		)
     	.animate({
             height : "100%"
     	}, { duration: 0 });
-
-    	//For wp7 where div with lower z-index are clickable....
-    	//SetTimeout to hide the menu only after closing
-		setTimeout( slidingMenu.css("visibility","hidden"), 180);
 	}
 
 	//Use to avoid overflow problem with scroll
