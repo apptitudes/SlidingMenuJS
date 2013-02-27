@@ -47,9 +47,30 @@ What features aren't supported ?
 -----------
 * __Gestures__ : we wanted this menu to work on "old" devices, htc hero for example which doesn't support gestures.
 
-However, __if you wan't to implement basic gestures__ to open your menu, you can __simply add this__ code `(tested on iOs > 3.0 and Android > 2.2)` :
+However, __if you wan't to implement basic gestures__ like swipe to open your menu, you can __simply__ : `(tested on iOs > 4.0 and Android > 2.2)` :
+
+* Go to http://eightmedia.github.com/hammer.js/ and download source. (simple and cool touch gestures library)
+* put hammer.min.js in your folder containing index.php of slidingMenuJS
+* Edit index.php and menu_nav_js as shown below :
     
-    /* TODO : copy past gesture code here */
+```javascript
+    /* Paste this in index.php between <head></head>: */
+    <script type="text/javascript" src="hammer.min.js"></script>
+
+    /* Paste this in menu_nav.js : */
+    initGestures();
+    
+    function initGestures() {
+
+    	var openingGesture = Hammer(document).on("swiperight", function(event) {
+	        openMenu();
+	    });
+	    var closingGesture = Hammer(document).on("swipeleft", function(event) {
+	        closeMenu();
+	    });
+	}
+```
+That's it ! Five lines of code and one lib and SlidingMenuJS now supports gestures ;-)
 
 * __CSS3 animations__ : initially we did support this kind of animation but they we're not compatible with Windows phone so we had to remove it.
 
