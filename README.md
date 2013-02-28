@@ -2,6 +2,8 @@
 
 Features, usage and instructions are [summarized on the homepage](http://apptitudes.github.com/SlidingMenuJS/).
 
+A demo page is available here : [SlidingMenuJS demo](http://slidingmenujs.apptitudes.fr).
+
 * Source: [https://github.com/apptitudes/SlidingMenuJS](https://github.com/apptitudes/SlidingMenuJS)
 * Homepage: [http://apptitudes.fr](http://apptitudes.fr)
 * Twitter: [@SlidingMenuJS](https://twitter.com/SlidingMenuJS)
